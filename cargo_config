@@ -15,6 +15,11 @@ replace-with = "vendored-sources"
 git = "https://github.com/jackpot51/rust-atomicwrites"
 replace-with = "vendored-sources"
 
+[source."git+https://github.com/jackpot51/trash-rs.git?branch=cosmic"]
+git = "https://github.com/jackpot51/trash-rs.git"
+branch = "cosmic"
+replace-with = "vendored-sources"
+
 [source."git+https://github.com/pop-os/cosmic-bg"]
 git = "https://github.com/pop-os/cosmic-bg"
 replace-with = "vendored-sources"
@@ -34,6 +39,10 @@ replace-with = "vendored-sources"
 
 [source."git+https://github.com/pop-os/dbus-settings-bindings"]
 git = "https://github.com/pop-os/dbus-settings-bindings"
+replace-with = "vendored-sources"
+
+[source."git+https://github.com/pop-os/fs_extra.git"]
+git = "https://github.com/pop-os/fs_extra.git"
 replace-with = "vendored-sources"
 
 [source."git+https://github.com/pop-os/glyphon.git?tag=v0.5.0"]
