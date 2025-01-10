@@ -1,12 +1,12 @@
 %undefine _debugsource_packages
 Name:           xdg-desktop-portal-cosmic
 Version:        1.0.0
-Release:        0.alpha4.0
+Release:        0.alpha5.0
 Summary:        COSMIC xdg portal
 License:        GPL-3.0-only
 Group:          Desktop/COSMIC
 URL:            https://github.com/pop-os/xdg-desktop-portal-cosmic
-Source0:        https://github.com/pop-os/xdg-desktop-portal-cosmic/archive/epoch-%{version}-alpha.4/%{name}-epoch-%{version}-alpha.4.tar.gz
+Source0:        https://github.com/pop-os/xdg-desktop-portal-cosmic/archive/epoch-%{version}-alpha.5/%{name}-epoch-%{version}-alpha.5.tar.gz
 Source1:        vendor.tar.xz
 Source2:        cargo_config
 
@@ -29,7 +29,7 @@ BuildRequires:  pkgconfig(xkbcommon)
 This package contains the xdg portal implementation for COSMIC DE.
 
 %prep
-%autosetup -n %{name}-epoch-%{version}-alpha.4 -a1 -p1
+%autosetup -n %{name}-epoch-%{version}-alpha.5 -a1 -p1
 mkdir .cargo
 cp %{SOURCE2} .cargo/config
 
