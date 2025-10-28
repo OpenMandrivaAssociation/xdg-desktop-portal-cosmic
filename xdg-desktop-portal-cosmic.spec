@@ -46,6 +46,7 @@ export VERGEN_GIT_SHA=$_commit
 %files
 %license LICENSE
 %{_libexecdir}/%{name}
+%{_prefix}/lib/systemd/user/org.freedesktop.impl.portal.desktop.cosmic.service
 %{_datadir}/icons/hicolor/scalable/actions/{screenshot-screen-symbolic,screenshot-selection-symbolic,screenshot-window-symbolic}.svg
 %{_datadir}/dbus-1/services/org.freedesktop.impl.portal.desktop.cosmic.service
 %{_datadir}/xdg-desktop-portal/cosmic-portals.conf
