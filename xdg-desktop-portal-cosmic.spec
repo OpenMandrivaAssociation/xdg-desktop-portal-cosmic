@@ -1,7 +1,7 @@
 %undefine _debugsource_packages
 Name:           xdg-desktop-portal-cosmic
 Version:        1.0.0
-%define beta beta.3
+%define beta beta.4
 Release:        %{?beta:0.%{beta}.}1
 Summary:        COSMIC xdg portal
 License:        GPL-3.0-only
