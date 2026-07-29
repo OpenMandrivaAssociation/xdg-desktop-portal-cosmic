@@ -40,6 +40,9 @@ cp %{SOURCE2} .cargo/config
 #export VERGEN_GIT_COMMIT_DATE="$(date --utc '+%Y-%m-%d %H:%M:%S %z')"
 #export VERGEN_GIT_SHA=$_commit
 #make_build
+# as of cosmic 1.4.0, rust 1.97.1 and llvm 23.1.0-rc1.
+# Disable LTO because error rustc-LLVM ERROR: expected function definition _RNvCslvstGAdgBpu_7___rustc12___rust_alloc to have an associated value info.
+export RUSTFLAGS="-C lto=off"
 just build
 
 %install
