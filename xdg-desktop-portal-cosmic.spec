@@ -1,6 +1,6 @@
 %undefine _debugsource_packages
 Name:           xdg-desktop-portal-cosmic
-Version:        1.0.2
+Version:        1.2.0
 #define beta beta.7
 Release:        %{?beta:0.%{beta}.}1
 Summary:        COSMIC xdg portal
@@ -16,6 +16,7 @@ BuildRequires:  clang-devel
 BuildRequires:  git-core
 BuildRequires:  hicolor-icon-theme
 BuildRequires:  make
+BuildRequires:  just
 BuildRequires:  pkgconfig
 BuildRequires:  pkgconfig(egl)
 BuildRequires:  pkgconfig(gbm)
@@ -36,12 +37,14 @@ cp %{SOURCE2} .cargo/config
 
 %build
 # Build failure workaround: https://github.com/pop-os/cosmic-files/issues/392#issuecomment-2308954953
-export VERGEN_GIT_COMMIT_DATE="$(date --utc '+%Y-%m-%d %H:%M:%S %z')"
-export VERGEN_GIT_SHA=$_commit
-%make_build
+#export VERGEN_GIT_COMMIT_DATE="$(date --utc '+%Y-%m-%d %H:%M:%S %z')"
+#export VERGEN_GIT_SHA=$_commit
+#make_build
+just build
 
 %install
-%make_install DESTDIR=%{buildroot} prefix=%{_prefix}
+#make_install DESTDIR=%{buildroot} prefix=%{_prefix}
+just rootdir=%{buildroot} prefix=%{_prefix} install
 
 %files
 %license LICENSE
